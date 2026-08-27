@@ -45,8 +45,12 @@ public abstract class Utilisateur {
         this.motDePasse = motDePasse;
         usersList.add(this);
     }
-    public Utilisateur(String identifiant, String nom, String prenom, String motDePasse, Date dateNaissance, Adresse adresse) {
-        this.identifiant = identifiant;
+    public Utilisateur(String identifiant,
+                          String nom,
+                          String prenom,
+                          String motDePasse,
+                          Date dateNaissance,
+                          Adresse adresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.motDePasse = motDePasse;

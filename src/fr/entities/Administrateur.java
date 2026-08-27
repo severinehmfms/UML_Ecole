@@ -1,15 +1,16 @@
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Date;
 
 public class Administrateur extends Utilisateur {
 
+    private static final List<Administrateur> administrateurs =
+            new ArrayList<>();
+
     private int idAdministrateur;
-    private static final List<Administrateur> administrateurs = new ArrayList<>();
 
     public Administrateur(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
-
         administrateurs.add(this);
     }
 

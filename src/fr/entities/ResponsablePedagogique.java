@@ -9,10 +9,14 @@ public class ResponsablePedagogique extends Utilisateur
             new ArrayList<>();
 
     private int idRespPedag;
-    private final List<Enseignant> enseignants;
-    private final List<Formation> formations;
+    private final List<Enseignant> enseignants = new ArrayList<>();
+    private final List<Formation> formations = new ArrayList<>();
 
-    public ResponsablePedagogique(String id,
+    public ResponsablePedagogique(String identifiant, String motDePasse) {
+        super(identifiant, motDePasse);
+    }
+
+    public ResponsablePedagogique(String identifiant,
                                   String nom,
                                   String prenom,
                                   String motDePasse,
@@ -20,11 +24,11 @@ public class ResponsablePedagogique extends Utilisateur
                                   Adresse adresse,
                                   int idRespPedag) {
 
-        super(id, nom, prenom, motDePasse, dateNaissance, adresse);
+        super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
 
         this.idRespPedag = idRespPedag;
-        this.enseignants = new ArrayList<>();
-        this.formations = new ArrayList<>();
+        //this.enseignants = new ArrayList<>();
+        //this.formations = new ArrayList<>();
 
         responsables.add(this);
     }
