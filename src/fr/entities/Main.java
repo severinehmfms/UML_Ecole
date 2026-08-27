@@ -8,6 +8,9 @@ public class Main {
 		new Eleve("eleve2", "1234");
 		new Eleve("eleve3", "1234");
 		new Administrateur("root","root");
+		new Enseignant("enseignant", "abcd");
+		new ResponsablePedagogique("responsable", "azerty");
+		new Directeur("directeur", "admin");
 		
 	   /* utilisateurs.add(new Eleve("eleve1", "1234"));
 	    utilisateurs.add(new Eleve("eleve2", "1234"));

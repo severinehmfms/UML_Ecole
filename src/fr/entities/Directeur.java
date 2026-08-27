@@ -8,7 +8,11 @@ public class Directeur extends Utilisateur
     private static final List<Directeur> directeurs = new ArrayList<>();
 
     private int idDirecteur;
-    private final List<ResponsablePedagogique> responsablesPedagogiques;
+    private final List<ResponsablePedagogique> responsablesPedagogiques = new ArrayList<>();
+
+    public Directeur(String identifiant, String motDePasse) {
+        super(identifiant, motDePasse);
+    }
 
     public Directeur(String identifiant,
                      String nom,
@@ -21,7 +25,7 @@ public class Directeur extends Utilisateur
         super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
 
         this.idDirecteur = idDirecteur;
-        this.responsablesPedagogiques = new ArrayList<>();
+        //this.responsablesPedagogiques = new ArrayList<>();
 
         directeurs.add(this);
     }
