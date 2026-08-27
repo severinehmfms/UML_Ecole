@@ -3,6 +3,10 @@ import java.util.List;
 
 public class Eleve extends Utilisateur {
 
+    public Eleve(String identifiant, String motDePasse) {
+        super(identifiant, motDePasse);
+    }
+    
     private int numeroEleve;
     private List<Cours> coursSuivis = new ArrayList<>();
 
