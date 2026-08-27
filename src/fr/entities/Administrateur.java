@@ -1,5 +1,51 @@
-public class Administrateur extends Personne {
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Administrateur extends Utilisateur {
 
     private int idAdministrateur;
-    
+    private static final List<Administrateur> administrateurs = new ArrayList<>();
+
+    public Administrateur(String identifiant, String motDePasse) {
+        super(identifiant, motDePasse);
+
+        administrateurs.add(this);
+    }
+
+    public Administrateur(String identifiant,
+                          String nom,
+                          String prenom,
+                          String motDePasse,
+                          Date dateNaissance,
+                          Adresse adresse,
+                          int idAdministrateur) {
+
+        super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
+
+        this.idAdministrateur = idAdministrateur;
+
+        administrateurs.add(this);
+    }
+
+    public static List<Administrateur> getAdministrateurs() {
+        return administrateurs;
+    }
+
+    public static Administrateur findAdminById(int id) {
+        for (Administrateur administrateur : administrateurs) {
+            if (administrateur.getIdAdministrateur() == id) {
+                return administrateur;
+            }
+        }
+        return null;
+    }
+
+    public int getIdAdministrateur() {
+        return idAdministrateur;
+    }
+
+    public void setIdAdministrateur(int idAdministrateur) {
+        this.idAdministrateur = idAdministrateur;
+    }
 }

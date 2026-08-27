@@ -12,7 +12,7 @@ public class ResponsablePedagogique extends Utilisateur
     private final List<Enseignant> enseignants;
     private final List<Formation> formations;
 
-    public ResponsablePedagogique(int id,
+    public ResponsablePedagogique(String id,
                                   String nom,
                                   String prenom,
                                   String motDePasse,
@@ -33,10 +33,9 @@ public class ResponsablePedagogique extends Utilisateur
         return responsables;
     }
 
-    public static ResponsablePedagogique findById(int id) {
+    public static ResponsablePedagogique findRespPedagById(int id) {
         for (ResponsablePedagogique responsable : responsables) {
-            if (responsable.getId() == id ||
-                responsable.getIdRespPedag() == id) {
+            if (responsable.getIdRespPedag() == id) {
                 return responsable;
             }
         }
@@ -108,7 +107,7 @@ public class ResponsablePedagogique extends Utilisateur
 
     @Override
     public void ajouterEnseignant(int idEnseignant) {
-        Enseignant enseignant = Enseignant.findById(idEnseignant);
+        Enseignant enseignant = Enseignant.findEnseignantById(idEnseignant);
 
         if (enseignant == null) {
             System.out.println("Enseignant introuvable : " + idEnseignant);
@@ -122,7 +121,7 @@ public class ResponsablePedagogique extends Utilisateur
 
     @Override
     public void modifierEnseignant(int idEnseignant) {
-        Enseignant enseignant = Enseignant.findById(idEnseignant);
+        Enseignant enseignant = Enseignant.findEnseignantById(idEnseignant);
 
         if (enseignant == null) {
             System.out.println("Enseignant introuvable : " + idEnseignant);
@@ -134,7 +133,7 @@ public class ResponsablePedagogique extends Utilisateur
 
     @Override
     public void retirerEnseignant(int idEnseignant) {
-        Enseignant enseignant = Enseignant.findById(idEnseignant);
+        Enseignant enseignant = Enseignant.findEnseignantById(idEnseignant);
 
         if (enseignant == null) {
             System.out.println("Enseignant introuvable : " + idEnseignant);
@@ -148,7 +147,7 @@ public class ResponsablePedagogique extends Utilisateur
     public void consulterEnseignants() {
         for (Enseignant enseignant : enseignants) {
             System.out.println(
-                enseignant.getId() + " - " +
+                enseignant.getIdEnseignant() + " - " +
                 enseignant.getNom() + " " +
                 enseignant.getPrenom()
             );

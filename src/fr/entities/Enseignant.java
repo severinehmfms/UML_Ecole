@@ -10,7 +10,7 @@ public class Enseignant extends Utilisateur
     private int idEnseignant;
     private final List<Cours> coursSuivis;
 
-    public Enseignant(int id,
+    public Enseignant(String id,
                       String nom,
                       String prenom,
                       String motDePasse,
@@ -30,10 +30,9 @@ public class Enseignant extends Utilisateur
         return enseignants;
     }
 
-    public static Enseignant findById(int id) {
+    public static Enseignant findEnseignantById(int id) {
         for (Enseignant enseignant : enseignants) {
-            if (enseignant.getId() == id ||
-                enseignant.getIdEnseignant() == id) {
+            if (enseignant.getIdEnseignant() == id) {
                 return enseignant;
             }
         }
