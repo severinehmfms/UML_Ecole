@@ -8,9 +8,13 @@ public class Enseignant extends Utilisateur
     private static final List<Enseignant> enseignants = new ArrayList<>();
 
     private int idEnseignant;
-    private final List<Cours> coursSuivis;
+    private final List<Cours> coursSuivis = new ArrayList<>();
 
-    public Enseignant(int id,
+    public Enseignant(String identifiant, String motDePasse) {
+        super(identifiant, motDePasse);
+    }
+
+    public Enseignant(String identifiant,
                       String nom,
                       String prenom,
                       String motDePasse,
@@ -18,10 +22,10 @@ public class Enseignant extends Utilisateur
                       Adresse adresse,
                       int idEnseignant) {
 
-        super(id, nom, prenom, motDePasse, dateNaissance, adresse);
+        super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
 
         this.idEnseignant = idEnseignant;
-        this.coursSuivis = new ArrayList<>();
+         //this.coursSuivis = new ArrayList<>();
 
         enseignants.add(this);
     }
@@ -32,7 +36,7 @@ public class Enseignant extends Utilisateur
 
     public static Enseignant findById(int id) {
         for (Enseignant enseignant : enseignants) {
-            if (enseignant.getId() == id ||
+            if (enseignant.getIdentifiant().equals(id) ||
                 enseignant.getIdEnseignant() == id) {
                 return enseignant;
             }

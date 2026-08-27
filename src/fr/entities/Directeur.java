@@ -10,7 +10,7 @@ public class Directeur extends Utilisateur
     private int idDirecteur;
     private final List<ResponsablePedagogique> responsablesPedagogiques;
 
-    public Directeur(int id,
+    public Directeur(String identifiant,
                      String nom,
                      String prenom,
                      String motDePasse,
@@ -18,7 +18,7 @@ public class Directeur extends Utilisateur
                      Adresse adresse,
                      int idDirecteur) {
 
-        super(id, nom, prenom, motDePasse, dateNaissance, adresse);
+        super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
 
         this.idDirecteur = idDirecteur;
         this.responsablesPedagogiques = new ArrayList<>();
@@ -32,7 +32,7 @@ public class Directeur extends Utilisateur
 
     public static Directeur findById(int id) {
         for (Directeur directeur : directeurs) {
-            if (directeur.getId() == id ||
+            if (directeur.getIdentifiant().equals(id) ||
                 directeur.getIdDirecteur() == id) {
                 return directeur;
             }
@@ -103,7 +103,7 @@ public class Directeur extends Utilisateur
     public void consulterCoursSuivis() {
         for (ResponsablePedagogique responsable : responsablesPedagogiques) {
             System.out.println(
-                responsable.getId() + " - " +
+                responsable.getIdentifiant() + " - " +
                 responsable.getNom() + " " +
                 responsable.getPrenom()
             );

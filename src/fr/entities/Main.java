@@ -19,7 +19,7 @@ public class Main {
 	    
 	    
 	    String loginTest = "root";
-	    String mdpTest = "mdp";
+	    String mdpTest = "root";
 	    
 	    if (Utilisateur.identification(loginTest)) {
 	    	System.out.println("Identification ok, merci de rentrer votre mot de passe");

@@ -12,7 +12,7 @@ public class ResponsablePedagogique extends Utilisateur
     private final List<Enseignant> enseignants;
     private final List<Formation> formations;
 
-    public ResponsablePedagogique(int id,
+    public ResponsablePedagogique(String identifiant,
                                   String nom,
                                   String prenom,
                                   String motDePasse,
@@ -20,7 +20,7 @@ public class ResponsablePedagogique extends Utilisateur
                                   Adresse adresse,
                                   int idRespPedag) {
 
-        super(id, nom, prenom, motDePasse, dateNaissance, adresse);
+        super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
 
         this.idRespPedag = idRespPedag;
         this.enseignants = new ArrayList<>();
@@ -35,7 +35,7 @@ public class ResponsablePedagogique extends Utilisateur
 
     public static ResponsablePedagogique findById(int id) {
         for (ResponsablePedagogique responsable : responsables) {
-            if (responsable.getId() == id ||
+            if (responsable.getIdentifiant().equals(id) ||
                 responsable.getIdRespPedag() == id) {
                 return responsable;
             }
@@ -148,7 +148,7 @@ public class ResponsablePedagogique extends Utilisateur
     public void consulterEnseignants() {
         for (Enseignant enseignant : enseignants) {
             System.out.println(
-                enseignant.getId() + " - " +
+                enseignant.getIdentifiant() + " - " +
                 enseignant.getNom() + " " +
                 enseignant.getPrenom()
             );
