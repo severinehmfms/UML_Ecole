@@ -29,7 +29,6 @@ public class Functions {
 		return choiceInt;
 	}
 	
-	
 	/**
 	 * Surcharge de la méthode input_int pour ne pas rentrer de valeur minimum et maximum
 	 * @param prompt
@@ -156,7 +155,6 @@ public class Functions {
 		}
 		return input_user;
 	}
-
 	
 	/** 
 	 * Fonction qui permet de demander une saisie à l'utilisateur : Les attendus pour oui ou non sont stockés dans les ensembles yes_answers et no_answers

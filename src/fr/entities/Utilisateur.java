@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -143,6 +144,60 @@ public abstract class Utilisateur {
     public boolean autorisation(Responsabilite responsabilite) {
         return responsabilites.contains(responsabilite);
     }
+
+    public String[] getMenu(){
+        String[] menu = new String[this.responsabilites.size()+1];
+        int index = 0;
+
+        menu[index++] = "Quitter";
+
+        if (this.autorisation(Responsabilite.CONSULTER_FORMATIONS)) {
+            menu[index++] = "Voir les formations proposées par l'école";
+        }
+
+        if (this.autorisation(Responsabilite.VOIR_SES_COURS)) {
+            menu[index++] = "Voir mes cours";
+        }
+
+        if (this.autorisation(Responsabilite.VOIR_COURS_A_DONNER)) {
+            menu[index++] = "Voir les cours à donner";
+        }
+
+        if (this.autorisation(Responsabilite.VOIR_LISTE_ELEVES)) {
+            menu[index++] = "Voir la liste des élèves";
+        }
+
+        if (this.autorisation(Responsabilite.AJOUTER_ELEVE_FORMATION)) {
+            menu[index++] = "Ajouter un élève à une formation";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_ELEVES)) {
+            menu[index++] = "Gérer les élèves";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_COURS)) {
+            menu[index++] = "Gérer les cours";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_ENSEIGNANTS)) {
+            menu[index++] = "Gérer les enseignants";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_RESPONSABLES)) {
+            menu[index++] = "Gérer les responsables";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_DROITS_UTILISATEURS)) {
+            menu[index++] = "Gérer les droits des utilisateurs";
+        }
+
+        if (this.autorisation(Responsabilite.GERER_COMPTES_UTILISATEURS)) {
+            menu[index++] = "Gérer les comptes utilisateurs";
+        }
+        return Arrays.copyOf(menu, index);
+    }
+
+
 
 	public String getIdentifiant() {
 		return identifiant;
