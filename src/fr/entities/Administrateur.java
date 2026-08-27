@@ -1,11 +1,5 @@
-//package fr.entities;
-
-public class Administrateur extends Utilisateur {
+public class Administrateur extends Personne {
 
     private int idAdministrateur;
-
-    public Administrateur(String identifiant, String motDePasse) {
-        super(identifiant, motDePasse);
-    }
-
+    
 }

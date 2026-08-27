@@ -3,9 +3,72 @@ import java.util.List;
 
 public class Cours {
 
+    private static final List<Cours> cours = new ArrayList<>();
+
     private int id;
     private String nom;
     private Formation formation;
     private Enseignant enseignant;
-    private List<Eleve> eleves = new ArrayList<>();
+    private final List<Eleve> eleves;
+
+    public Cours(int id, String nom,
+                 Formation formation,
+                 Enseignant enseignant) {
+        this.id = id;
+        this.nom = nom;
+        this.formation = formation;
+        this.enseignant = enseignant;
+        this.eleves = new ArrayList<>();
+
+        cours.add(this);
+    }
+
+    public static List<Cours> getCours() {
+        return cours;
+    }
+
+    public static Cours findById(int id) {
+        for (Cours cours : cours) {
+            if (cours.getId() == id) {
+                return cours;
+            }
+        }
+        return null;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public Formation getFormation() {
+        return formation;
+    }
+
+    public void setFormation(Formation formation) {
+        this.formation = formation;
+    }
+
+    public Enseignant getEnseignant() {
+        return enseignant;
+    }
+
+    public void setEnseignant(Enseignant enseignant) {
+        this.enseignant = enseignant;
+    }
+
+    public List<Eleve> getEleves() {
+        return eleves;
+    }
 }

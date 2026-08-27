@@ -5,10 +5,6 @@ public class Eleve extends Utilisateur {
 
     private int numeroEleve;
     private List<Cours> coursSuivis = new ArrayList<>();
-    
-    public Eleve(String identifiant, String motDePasse) {
-        super(identifiant, motDePasse);
-    }
 
     public void sInscrireAuCours(int idCours) {
         // À implémenter
