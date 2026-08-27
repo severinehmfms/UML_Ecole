@@ -11,6 +11,7 @@ public class Administrateur extends Utilisateur {
 
     public Administrateur(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
+        administrateurs.add(this);
     }
 
     public Administrateur(String identifiant,
@@ -32,10 +33,9 @@ public class Administrateur extends Utilisateur {
         return administrateurs;
     }
 
-    public static Administrateur findById(int id) {
+    public static Administrateur findAdminById(int id) {
         for (Administrateur administrateur : administrateurs) {
-            if (administrateur.getIdAdministrateur() == id ||
-                    administrateur.getIdAdministrateur() == id) {
+            if (administrateur.getIdAdministrateur() == id) {
                 return administrateur;
             }
         }

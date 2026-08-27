@@ -34,10 +34,9 @@ public class Directeur extends Utilisateur
         return directeurs;
     }
 
-    public static Directeur findById(int id) {
+    public static Directeur findDirecteurById(int id) {
         for (Directeur directeur : directeurs) {
-            if (directeur.getIdentifiant().equals(id) ||
-                directeur.getIdDirecteur() == id) {
+            if (directeur.getIdDirecteur() == id) {
                 return directeur;
             }
         }
@@ -59,7 +58,7 @@ public class Directeur extends Utilisateur
     @Override
     public void ajouterRespPedag(int idRespPedag) {
         ResponsablePedagogique responsable =
-                ResponsablePedagogique.findById(idRespPedag);
+                ResponsablePedagogique.findRespPedagById(idRespPedag);
 
         if (responsable == null) {
             System.out.println(
@@ -76,7 +75,7 @@ public class Directeur extends Utilisateur
     @Override
     public void modifierRespPedag(int idRespPedag) {
         ResponsablePedagogique responsable =
-                ResponsablePedagogique.findById(idRespPedag);
+                ResponsablePedagogique.findRespPedagById(idRespPedag);
 
         if (responsable == null) {
             System.out.println(
@@ -91,7 +90,7 @@ public class Directeur extends Utilisateur
     @Override
     public void retirerRespPedag(int idRespPedag) {
         ResponsablePedagogique responsable =
-                ResponsablePedagogique.findById(idRespPedag);
+                ResponsablePedagogique.findRespPedagById(idRespPedag);
 
         if (responsable == null) {
             System.out.println(
@@ -107,7 +106,7 @@ public class Directeur extends Utilisateur
     public void consulterCoursSuivis() {
         for (ResponsablePedagogique responsable : responsablesPedagogiques) {
             System.out.println(
-                responsable.getIdentifiant() + " - " +
+                responsable.getIdRespPedag() + " - " +
                 responsable.getNom() + " " +
                 responsable.getPrenom()
             );
