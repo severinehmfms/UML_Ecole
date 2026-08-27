@@ -46,6 +46,20 @@ public abstract class Utilisateur {
         usersList.add(this);
     }
 
+    public Utilisateur(String identifiant,
+                          String nom,
+                          String prenom,
+                          String motDePasse,
+                          Date dateNaissance,
+                          Adresse adresse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.motDePasse = motDePasse;
+        this.dateNaissance = dateNaissance;
+        this.adresse = adresse;
+        usersList.add(this);
+    }
+
     public static boolean identification(String identifiant) {
         for (Utilisateur user : usersList) {
     	    if (user.getIdentifiant().equals(identifiant)) {
