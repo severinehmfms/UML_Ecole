@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -31,7 +30,7 @@ public class Main {
 		int choice_user = -1;
 		while (choice_user != 0) {
 			//On demande à l'utilisateur son choix par rapport au menu proposé
-			choice_user = Functions.ask_user_choice(scanner, menu);
+			choice_user = InputUtiles.ask_user_choice(scanner, menu);
 
 			//Si l'utilisateur est à null (=visiteur), on travaille sur le menu de base de non connexion
 			if (userConnecte == null) {
@@ -79,8 +78,8 @@ public class Main {
 	public static Utilisateur connexion() {
 		Utilisateur user = null;
 		//On va demander à l'utilisateur de saisir son login, puis son mot de passe
-		String loginTest = Functions.input_string(scanner, "Entrez votre identifiant");
-		String mdpTest = Functions.input_string(scanner, "Entrez votre mot de passe");
+		String loginTest = InputUtiles.input_string(scanner, "Entrez votre identifiant");
+		String mdpTest = InputUtiles.input_string(scanner, "Entrez votre mot de passe");
 
 		if (Utilisateur.identification(loginTest)) {
 			user = Utilisateur.authentification(loginTest, mdpTest);
