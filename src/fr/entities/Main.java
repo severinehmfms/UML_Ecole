@@ -20,9 +20,9 @@ public class Main {
 		new Directeur("directeur", "admin");
 
 		//On initialise les formations pour l'exercice
-		Formation formation1 = new Formation(1, "Formation CDA");
-		new Formation(2, "BUT Réseaux et télécommunication");
-		new Formation(3, "Diplôme d’ingénieur informatique");
+		Formation formation1 = new Formation("Formation CDA");
+		new Formation("BUT Réseaux et télécommunication");
+		new Formation("Diplôme d’ingénieur informatique");
 
 		//On initialise les cours pour l'exercice
 		Cours cours1 = new Cours("UML", formation1, enseignant);
