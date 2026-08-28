@@ -7,20 +7,21 @@
         <mxCell id="shHNwknzVN4KceihfUZL-32" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Elève" vertex="1">
           <mxGeometry height="141" width="210" x="680" y="250" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-33" parent="shHNwknzVN4KceihfUZL-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- numeroEleve: int&lt;div&gt;- coursSuivis: List&amp;lt;Cours&amp;gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="shHNwknzVN4KceihfUZL-33" parent="shHNwknzVN4KceihfUZL-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- numeroEleve: int&lt;div&gt;- formationsSuivies: List&amp;lt;Formation&amp;gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="47" width="210" y="26" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-34" parent="shHNwknzVN4KceihfUZL-32" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="210" y="73" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-118" parent="shHNwknzVN4KceihfUZL-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ sInscrireAuCours(int)&lt;/span&gt;&lt;/div&gt;+ seDesinscrireDuCours(int)&lt;div&gt;+ voirCours(int): Cours&lt;/div&gt;" vertex="1">
+        <mxCell id="shHNwknzVN4KceihfUZL-118" parent="shHNwknzVN4KceihfUZL-32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ sInscrireALaFormation(int)&lt;/span&gt;&lt;/div&gt;+ seDesinscrireDeLaFormation(int)&lt;div&gt;+ voirFormation(int): Forma&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;tion&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="210" y="81" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-83" edge="1" parent="1" source="shHNwknzVN4KceihfUZL-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="shHNwknzVN4KceihfUZL-32">
+        <mxCell id="shHNwknzVN4KceihfUZL-83" edge="1" parent="1" source="shHNwknzVN4KceihfUZL-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="shHNwknzVN4KceihfUZL-32">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="550" y="484" />
+              <mxPoint x="550" y="108" />
               <mxPoint x="550" y="330.43" />
+              <mxPoint x="680" y="330.43" />
             </Array>
             <mxPoint x="580" y="320" as="targetPoint" />
           </mxGeometry>
@@ -43,7 +44,7 @@
         <mxCell id="shHNwknzVN4KceihfUZL-36" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Cours" vertex="1">
           <mxGeometry height="128" width="160" x="290" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-37" parent="shHNwknzVN4KceihfUZL-36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- id: int&lt;div&gt;- nom: String&lt;/div&gt;&lt;div&gt;- formation: Formation&lt;/div&gt;&lt;div&gt;- enseignant: Enseignant&lt;/div&gt;&lt;div&gt;- eleves: List&amp;lt;Eleve&amp;gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="shHNwknzVN4KceihfUZL-37" parent="shHNwknzVN4KceihfUZL-36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- id: int&lt;div&gt;- nom: String&lt;/div&gt;&lt;div&gt;- formation: Formation&lt;/div&gt;&lt;div&gt;- enseignant: Enseignant&lt;/div&gt;" vertex="1">
           <mxGeometry height="94" width="160" y="26" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-38" parent="shHNwknzVN4KceihfUZL-36" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -157,7 +158,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-60" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ResponsablePedagogique" vertex="1">
-          <mxGeometry height="175" width="250" x="790" y="457" as="geometry" />
+          <mxGeometry height="209" width="250" x="790" y="457" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-120" parent="shHNwknzVN4KceihfUZL-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- enseignants: List&amp;lt;Enseignants&amp;gt;&lt;/span&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;- formations: List&amp;lt;Formation&amp;gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="47" width="250" y="26" as="geometry" />
@@ -165,8 +166,8 @@
         <mxCell id="shHNwknzVN4KceihfUZL-62" parent="shHNwknzVN4KceihfUZL-60" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="250" y="73" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-126" parent="shHNwknzVN4KceihfUZL-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ consulterFormations()&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ ajouterEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ modifierEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retirerEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ consulterEnseignants()&lt;/p&gt;" vertex="1">
-          <mxGeometry height="94" width="250" y="81" as="geometry" />
+        <mxCell id="shHNwknzVN4KceihfUZL-126" parent="shHNwknzVN4KceihfUZL-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ consulterFormations()&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ ajouterEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ modifierEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retirerEnseignant(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ consulterEnseignants()&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ inscrireEleveALaFormation(int, int)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ desinscrireEleveDeLaFormation(int, int)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="128" width="250" y="81" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-149" edge="1" parent="1" source="shHNwknzVN4KceihfUZL-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="shHNwknzVN4KceihfUZL-60">
           <mxGeometry relative="1" as="geometry">
@@ -179,7 +180,7 @@
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-163" connectable="0" parent="shHNwknzVN4KceihfUZL-149" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
           <mxGeometry relative="1" x="0.7075" as="geometry">
-            <mxPoint x="4" y="-17" as="offset" />
+            <mxPoint x="-4" y="-17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-164" connectable="0" parent="shHNwknzVN4KceihfUZL-149" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..n" vertex="1">
@@ -205,16 +206,16 @@
           <mxGeometry height="86" width="198.57" y="81" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-69" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Formation" vertex="1">
-          <mxGeometry height="167" width="190" x="275" y="30" as="geometry" />
+          <mxGeometry height="206" width="190" x="275" y="13" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-70" parent="shHNwknzVN4KceihfUZL-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: int&lt;/div&gt;- nom: String&lt;div&gt;- lesCours: List&amp;lt;Cours&amp;gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="55" width="190" y="26" as="geometry" />
+        <mxCell id="shHNwknzVN4KceihfUZL-70" parent="shHNwknzVN4KceihfUZL-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: int&lt;/div&gt;- nom: String&lt;div&gt;- lesCours: List&amp;lt;Cours&amp;gt;&lt;/div&gt;&lt;div&gt;- eleves: List&amp;lt;Eleve&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="78" width="190" y="26" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-71" parent="shHNwknzVN4KceihfUZL-69" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="190" y="81" as="geometry" />
+          <mxGeometry height="8" width="190" y="104" as="geometry" />
         </mxCell>
-        <mxCell id="shHNwknzVN4KceihfUZL-72" parent="shHNwknzVN4KceihfUZL-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;+ ajouterCours(&lt;/span&gt;String&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ modifierCours(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retirerCours(String)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ consulterCoursSuivis()&lt;/p&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="78" width="190" y="89" as="geometry" />
+        <mxCell id="shHNwknzVN4KceihfUZL-72" parent="shHNwknzVN4KceihfUZL-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;+ ajouterCours(&lt;/span&gt;int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ modifierCours(int)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retirerCours(int)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ voirCours(int): Cours&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ consulterCoursSuivis()&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="190" y="112" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-81" edge="1" parent="1" source="shHNwknzVN4KceihfUZL-52" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" target="shHNwknzVN4KceihfUZL-40" value="1">
           <mxGeometry relative="1" x="-0.7778" y="-11" as="geometry">
@@ -367,8 +368,13 @@
         <mxCell id="shHNwknzVN4KceihfUZL-185" edge="1" parent="1" source="shHNwknzVN4KceihfUZL-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=16;" target="shHNwknzVN4KceihfUZL-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="shHNwknzVN4KceihfUZL-187" connectable="0" parent="shHNwknzVN4KceihfUZL-185" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="responsa&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;bilites&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.6912" as="geometry">
+            <mxPoint x="17" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-179" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=41;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&amp;lt;&amp;lt;Numeration&amp;gt;&amp;gt;&lt;div&gt;Responsabilite&lt;/div&gt;" vertex="1">
-          <mxGeometry height="225" width="220" x="1210" y="-57.5" as="geometry" />
+          <mxGeometry height="225" width="220" x="1320" y="-57.5" as="geometry" />
         </mxCell>
         <mxCell id="shHNwknzVN4KceihfUZL-180" parent="shHNwknzVN4KceihfUZL-179" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;CONSULTER_FORMATIONS&lt;/div&gt;&lt;div&gt;VOIR_SES_COURS&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;VOIR_COURS_A_DONNER,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;VOIR_LISTE_ELEVES,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;AJOUTER_ELEVE_FORMATION,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;GERER_ELEVES,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GERER_COURS,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;GERER_ENSEIGNANTS,&lt;/div&gt;&lt;div&gt;GERER_RESPONSABLES,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GERER_DROITS_UTILISATEURS,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GERER_COMPTES_UTILISATEURS&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="184" width="220" y="41" as="geometry" />
