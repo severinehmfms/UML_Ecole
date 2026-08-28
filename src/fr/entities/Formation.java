@@ -51,13 +51,17 @@ public class Formation {
         return lesCours;
     }
 
-    public void ajouterCours(int idCours) {
-        Cours cours = Cours.findById(idCours);
+    /**
+     * Fonction qui permet d'ajouter un Cours passé en paramètre à une formation
+     * @param cours
+     */
+    public void ajouterCours(Cours cours) {
+        /*Cours cours = Cours.findById(idCours);
 
         if (cours == null) {
             System.out.println("Cours introuvable : " + idCours);
             return;
-        }
+        }*/
 
         if (cours != null && !lesCours.contains(cours)) {
             lesCours.add(cours);
@@ -73,25 +77,26 @@ public class Formation {
             return;
         }
 
-        // Modification à définir selon les besoins.
+        // TODO Modification à définir selon les besoins.
     }
 
-    public void retirerCours(int idCours) {
-        Cours cours = Cours.findById(idCours);
+    public void retirerCours(Cours cours) {
+        /*Cours cours = Cours.findById(idCours);
 
         if (cours == null) {
             System.out.println("Cours introuvable : " + idCours);
             return;
+        }*/
+
+        if (cours != null && lesCours.contains(cours)) {
+            lesCours.remove(cours);
         }
-
-        lesCours.remove(cours);
-
         if (cours.getFormation() == this) {
             cours.setFormation(null);
         }
     }
 
-    public void consulterCoursSuivis() {
+    public void afficherCoursInclus() {
         for (Cours cours : lesCours) {
             System.out.println(cours.getId() + " - " + cours.getNom());
         }

@@ -10,7 +10,7 @@ public class Main {
 		//On initialise les utilisateurs pour l'exercice
 		Eleve eleve = new Eleve("eleve1", "1234");
 		eleve.setNom("Alice Dupont");
-		new Eleve("eleve2", "5678");
+		Eleve eleve2 = new Eleve("eleve2", "5678");
 		new Eleve("eleve3", "1212");
 		new Administrateur("root","root");
 		Enseignant enseignant = new Enseignant("enseignant", "abcd");
@@ -32,7 +32,8 @@ public class Main {
 		Cours cours4 = new Cours("Réseau", formation2, enseignant2);
 
 		eleve.inscrireEleveAFormation(formation1);
-		eleve.inscrireEleveAFormation(formation2);
+
+		eleve2.inscrireEleveAFormation(formation2);
 
 		Utilisateur userConnecte = null;
 

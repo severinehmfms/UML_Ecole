@@ -19,7 +19,11 @@ public class Cours {
     	
     	this.id = prochainId++;
         this.nom = nom;
+
         this.formation = formation;
+        //On rajoute le cours à la listes des cours de la formation
+        formation.ajouterCours(this);
+
         this.enseignant = enseignant;
         this.eleves = new ArrayList<>();
 
