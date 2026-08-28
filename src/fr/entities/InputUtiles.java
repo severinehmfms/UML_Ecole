@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
- * Fonctions plus génériques pas spécifiques aux avions
+ * Fonctions génériques liées aux input
  */
 public final class InputUtiles {
 
