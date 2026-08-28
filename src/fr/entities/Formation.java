@@ -6,12 +6,14 @@ public class Formation {
     //Liste des formations instanciées
     private static final List<Formation> formations = new ArrayList<>();
 
+    private static int prochainId = 1;
+
     private int id;
     private String nom;
     private final List<Cours> lesCours;
 
-    public Formation(int id, String nom) {
-        this.id = id;
+    public Formation(String nom) {
+        this.id = prochainId++;
         this.nom = nom;
         this.lesCours = new ArrayList<>();
 
