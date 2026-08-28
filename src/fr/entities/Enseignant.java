@@ -72,13 +72,14 @@ public class Enseignant extends Personnel
                 break;
             case 2 :
                 if (this.autorisation(Responsabilite.VOIR_LISTE_ELEVES)) {
-                    System.out.println("Voir la liste des élèves");
-                    //TODO Ici appeler la méthode d'affichage de la liste des élèves'
-
-                }else{
-                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                    System.out.println("Liste des élèves");
+                    //On récupère la liste des élèves et on l'affiche
+                    List<Eleve> listeEleves = Eleve.getEleves();
+                    //On parcoure la liste des formations suivies par l'élève
+                    for (Eleve e : listeEleves) {
+                        System.out.println(e.toString());
+                    }
                 }
-
                 break;
         }
     }

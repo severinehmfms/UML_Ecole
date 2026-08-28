@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Eleve extends Personnel {
+public class Eleve extends Utilisateur {
     private int numeroEleve;
 
     //Liste des formations suivies par l'élève
@@ -70,21 +70,7 @@ public class Eleve extends Personnel {
             case 1:
                 if (this.autorisation(Responsabilite.VOIR_SES_COURS)) {
                     System.out.println("Mes cours");
-
-                    List<Formation> formationsSuivies = this.getFormationsSuivies();
-                    //On parcoure la liste des formations suivies par l'élève
-                    for (Formation f : formationsSuivies) {
-                        System.out.println("Formation " + f.getNom());
-                        //Pour chaque formation on récupère la liste des cours correspondant
-                        List<Cours> coursSuivis = f.getLesCours();
-                        //On parcoure la liste des cours et on les affiche
-                        for (Cours c : coursSuivis) {
-                            System.out.print(" - " + c.getNom());
-                            if (c.getEnseignant() != null)
-                                System.out.print(" Professeur : " + c.getEnseignant().toString());
-                            System.out.println();
-                        }
-                    }
+                    this.afficherCours();
                 }else{
                     System.out.println(Utilisateur.MSG_ERREUR_DROITS);
                 }
@@ -118,11 +104,27 @@ public class Eleve extends Personnel {
      */
     public void desinscrireEleveFormation(Formation formation) {
         //TODO À implémenter
-        //Voir si on utilise objet formation ou id ?
+
     }
 
-    public Cours voirCours(int idCours) {
-        // À implémenter
-        return null;
+    /***
+     * Fonction qui affiche les cours d'un élève
+     * @return
+     */
+    public void afficherCours() {
+        List<Formation> formationsSuivies = this.getFormationsSuivies();
+        //On parcoure la liste des formations suivies par l'élève
+        for (Formation f : formationsSuivies) {
+            System.out.println("Formation " + f.getNom());
+            //Pour chaque formation on récupère la liste des cours correspondant
+            List<Cours> coursSuivis = f.getLesCours();
+            //On parcoure la liste des cours et on les affiche
+            for (Cours c : coursSuivis) {
+                System.out.print(" - " + c.getNom());
+                if (c.getEnseignant() != null)
+                    System.out.print(" Professeur : " + c.getEnseignant().toString());
+                System.out.println();
+            }
+        }
     }
 }
