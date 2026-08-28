@@ -4,6 +4,8 @@ import java.util.List;
 public class Cours {
 
     private static final List<Cours> cours = new ArrayList<>();
+    
+    private static int prochainId = 1;
 
     private int id;
     private String nom;
@@ -11,10 +13,11 @@ public class Cours {
     private Enseignant enseignant;
     private final List<Eleve> eleves;
 
-    public Cours(int id, String nom,
+    public Cours(String nom,
                  Formation formation,
                  Enseignant enseignant) {
-        this.id = id;
+    	
+    	this.id = prochainId++;
         this.nom = nom;
         this.formation = formation;
         this.enseignant = enseignant;

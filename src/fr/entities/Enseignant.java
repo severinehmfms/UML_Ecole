@@ -94,6 +94,13 @@ public class Enseignant extends Personnel
     public List<Cours> getCoursSuivis() {
         return coursSuivis;
     }
+    
+    @Override
+	public void create_Cours(String nom, Formation formation) {
+        Cours cours = new Cours(nom, formation, this);
+
+        coursSuivis.add(cours);
+    }
 
     @Override
     public void ajouterCours(int idCours) {
