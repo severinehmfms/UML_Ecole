@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Eleve extends Personnel {
+	
+	private static int prochainNumeroEleve = 1;
+	 
     private int numeroEleve;
 
     //Liste des formations suivies par l'élève
@@ -15,6 +19,9 @@ public class Eleve extends Personnel {
 
     public Eleve(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
+        
+        this.numeroEleve = prochainNumeroEleve++;
+        eleves.add(this);
     }
 
     public Eleve(String id,
@@ -22,12 +29,11 @@ public class Eleve extends Personnel {
                  String prenom,
                  String motDePasse,
                  java.util.Date dateNaissance,
-                 Adresse adresse,
-                 int numeroEleve) {
+                 Adresse adresse) {
 
         super(id, nom, prenom, motDePasse, dateNaissance, adresse);
 
-        this.numeroEleve = numeroEleve;
+        this.numeroEleve = prochainNumeroEleve++;
         //this.formationsSuivies = new ArrayList<>();
 
         eleves.add(this);
@@ -65,7 +71,7 @@ public class Eleve extends Personnel {
      * Fonction associée à la méthode getMenu, qui permet d'effectuer l'action demandée par l'utilisateur
      * @param choiceMenuUser
      */
-    public void getMenuAction(int choiceMenuUser){
+    public void getMenuAction(int choiceMenuUser, Scanner scanner){
         switch(choiceMenuUser){
             case 1:
                 if (this.autorisation(Responsabilite.VOIR_SES_COURS)) {

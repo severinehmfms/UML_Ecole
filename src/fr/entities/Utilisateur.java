@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -152,7 +152,7 @@ public abstract class Utilisateur {
     public abstract String[] getMenu();
 
     //Classe abstraite getMenuAction
-    public abstract void getMenuAction(int choiceMenuUser);
+    public abstract void getMenuAction(int choiceMenuUser, Scanner scanner);
 
     /*
     //Finalement ça ne me plait pas, pour gérer les actions derrière... et pas très POO !

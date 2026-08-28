@@ -80,7 +80,7 @@ public class Main {
 					System.out.println("Au-revoir et à bientôt !");
 				}else{
 					//On appelle l'action correspondant au menu de l'utilisateur pour ce type d'utilisateur
-					userConnecte.getMenuAction(choice_user);
+					userConnecte.getMenuAction(choice_user, scanner);
 				}
 			}
 		}

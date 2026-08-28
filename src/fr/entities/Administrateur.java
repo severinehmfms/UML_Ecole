@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Date;
 
 public class Administrateur extends Utilisateur {
@@ -58,7 +59,7 @@ public class Administrateur extends Utilisateur {
         return menu;
     }
 
-    public void getMenuAction(int choiceMenuUser){
+    public void getMenuAction(int choiceMenuUser, Scanner scanner){
        switch(choiceMenuUser){
            case 1:
                if (this.autorisation(Responsabilite.GERER_DROITS_UTILISATEURS)) {
@@ -73,6 +74,8 @@ public class Administrateur extends Utilisateur {
                if (this.autorisation(Responsabilite.GERER_COMPTES_UTILISATEURS)) {
                    System.out.println("Gestion des comptes utilisateurs");
                    //TODO Ici appeler la méthode de gestion des utilisateurs
+                   
+                   gestionComptesUtilisateurs(scanner);
 
                }else{
                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
@@ -88,4 +91,69 @@ public class Administrateur extends Utilisateur {
     public void setIdAdministrateur(int idAdministrateur) {
         this.idAdministrateur = idAdministrateur;
     }
+    
+    private void gestionComptesUtilisateurs(Scanner scanner) {
+
+        String[] menu = {
+            "Retour",
+            "Créer un élève",
+            "Créer un enseignant",
+            "Créer un responsable pédagogique"
+        };
+
+        int choix = InputUtiles.ask_user_choice(scanner, menu);
+
+        switch (choix) {
+
+            case 1:
+                creerEleve(scanner);
+                break;
+
+            case 2:
+                // TODO créer enseignant
+                break;
+
+            case 3:
+                // TODO créer responsable pédagogique
+                break;
+        }
+    }
+    
+    private void creerEleve(Scanner scanner) {
+
+        String identifiant = InputUtiles.input_string(
+            scanner,
+            "Identifiant :"
+        );
+
+        String motDePasse = InputUtiles.input_string(
+            scanner,
+            "Mot de passe :"
+        );
+
+        String nom = InputUtiles.input_string(
+            scanner,
+            "Nom :"
+        );
+
+        String prenom = InputUtiles.input_string(
+            scanner,
+            "Prénom :"
+        );
+
+        Eleve eleve = new Eleve(
+            identifiant,
+            nom,
+            prenom,
+            motDePasse,
+            null,
+            null
+        );
+
+        System.out.println(
+            "Élève créé avec l'id numéro : "
+            + eleve.getNumeroEleve()
+        );
+    }
+    
 }

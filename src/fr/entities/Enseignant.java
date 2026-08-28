@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.List;
 import java.util.Date;
 
@@ -59,7 +60,7 @@ public class Enseignant extends Personnel
         return menu;
     }
 
-    public void getMenuAction(int choiceMenuUser){
+    public void getMenuAction(int choiceMenuUser, Scanner scanner){
         switch(choiceMenuUser){
             case 1:
                 if (this.autorisation(Responsabilite.VOIR_COURS_A_DONNER)) {
