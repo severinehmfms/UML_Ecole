@@ -7,22 +7,28 @@ public class Main {
 
 	public static void main(String[] args) {
 
-	    //On initialise les utilisateurs pour l'exercice
+		//On initialise les utilisateurs pour l'exercice
 		Eleve eleve = new Eleve("eleve1", "1234");
 		eleve.setNom("Alice Dupont");
 		new Eleve("eleve2", "5678");
 		new Eleve("eleve3", "1212");
 		new Administrateur("root","root");
-		new Enseignant("enseignant", "abcd");
-		new Enseignant("enseignant2", "efgh");
+		Enseignant enseignant = new Enseignant("enseignant", "abcd");
+		Enseignant enseignant2 = new Enseignant("enseignant2", "efgh");
 		new ResponsablePedagogique("responsable1", "azerty");
 		new ResponsablePedagogique("responsable2", "qwerty");
 		new Directeur("directeur", "admin");
 
 		//On initialise les formations pour l'exercice
-		new Formation(1, "Formation CDA");
+		Formation formation1 = new Formation(1, "Formation CDA");
 		new Formation(2, "BUT Réseaux et télécommunication");
 		new Formation(3, "Diplôme d’ingénieur informatique");
+
+		//On initialise les cours pour l'exercice
+		Cours cours1 = new Cours("UML", formation1, enseignant);
+		Cours cours2 = new Cours("JAVA", formation1, enseignant2);
+
+
 
 		Utilisateur userConnecte = null;
 
