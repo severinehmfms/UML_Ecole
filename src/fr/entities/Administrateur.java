@@ -61,12 +61,22 @@ public class Administrateur extends Utilisateur {
     public void getMenuAction(int choiceMenuUser){
        switch(choiceMenuUser){
            case 1:
-               //TODO Ici appeler la méthode de gestion des droits des utilisateurs
-               System.out.println("Gestion des droits des utilisateurs");
+               if (this.autorisation(Responsabilite.GERER_DROITS_UTILISATEURS)) {
+                   System.out.println("Gestion des droits des utilisateurs");
+                   //TODO Ici appeler la méthode de gestion des droits des utilisateurs
+
+               }else{
+                   System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+               }
                break;
            case 2 :
-               //TODO Ici appeler la méthode de gestion des utilisateurs
-               System.out.println("Gestion des comptes utilisateurs");
+               if (this.autorisation(Responsabilite.GERER_COMPTES_UTILISATEURS)) {
+                   System.out.println("Gestion des comptes utilisateurs");
+                   //TODO Ici appeler la méthode de gestion des utilisateurs
+
+               }else{
+                   System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+               }
                break;
        }
     }

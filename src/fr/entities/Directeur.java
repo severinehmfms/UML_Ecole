@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-public class Directeur extends Utilisateur
+public class Directeur extends Personnel
         implements InterfaceDirecteur {
 
     private static final List<Directeur> directeurs = new ArrayList<>();
@@ -63,16 +63,31 @@ public class Directeur extends Utilisateur
     public void getMenuAction(int choiceMenuUser){
         switch(choiceMenuUser){
             case 1:
-                //TODO Ici appeler la méthode de gestion des cours
-                System.out.println("Gestion des cours");
+                if (this.autorisation(Responsabilite.GERER_COURS)) {
+                    System.out.println("Gestion des cours");
+                    //TODO Ici appeler la méthode de gestion des cours
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
             case 2 :
-                //TODO Ici appeler la méthode de gestion des enseignants
-                System.out.println("Gestion des enseignants");
+                if (this.autorisation(Responsabilite.GERER_ENSEIGNANTS)) {
+                    System.out.println("Gestion des enseignants");
+                    //TODO Ici appeler la méthode de gestion des enseignants
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
             case 3 :
-                //TODO Ici appeler la méthode de gestion des responsables pédagogiques
-                System.out.println("Gestion des responsables pédagogiques");
+                if (this.autorisation(Responsabilite.GERER_RESPONSABLES)) {
+                    System.out.println("Gestion des responsables pédagogiques");
+                    //TODO Ici appeler la méthode de gestion des responsables pédagogiques
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
         }
     }

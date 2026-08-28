@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Eleve extends Utilisateur {
+public class Eleve extends Personnel {
 
     public Eleve(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
@@ -60,8 +60,13 @@ public class Eleve extends Utilisateur {
     public void getMenuAction(int choiceMenuUser){
         switch(choiceMenuUser){
             case 1:
-                //TODO Ici appeler la méthode d'affichage des cours de l'élève
-                System.out.println("Mes cours");
+                if (this.autorisation(Responsabilite.VOIR_SES_COURS)) {
+                    System.out.println("Mes cours");
+                    //TODO Ici appeler la méthode d'affichage des cours de l'élève
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
         }
     }

@@ -8,9 +8,13 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
- * Fonctions plus génériques pas spécifiques aux avions
+ * Fonctions génériques liées aux input
  */
-public class Functions {
+public final class InputUtiles {
+
+	private InputUtiles() {
+		throw new java.lang.UnsupportedOperationException("Utility class and cannot be instantiated");
+	}
 
 	/**
 	 * Fonction qui va afficher le menu proposé à l'utilisateur (en paramètre)
@@ -25,7 +29,7 @@ public class Functions {
 		}
 		
 		//On récupère la saisie de l'utilisateur entre 0 et la taille du menu
-		int choiceInt = Functions.input_int(scanner, menuStr, 0, menu.length);
+		int choiceInt = InputUtiles.input_int(scanner, menuStr, 0, menu.length);
 		return choiceInt;
 	}
 	
