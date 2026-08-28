@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="imT_0NBLPzHjE8QxIG9n">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P9-OtHrmIBAMTXOggs3P-7" parent="1" style="html=1;whiteSpace=wrap;" value="IHM" vertex="1">
+          <mxGeometry height="55" width="110" x="260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="430" width="610" x="100" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Utilisateur" vertex="1">
+          <mxGeometry height="60" width="120" x="465" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="alternatif" vertex="1">
+          <mxGeometry height="30" width="80" x="100" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-9" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=1;entryX=1.001;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.003;exitY=0.299;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="220" />
+            </Array>
+            <mxPoint x="101.21999999999993" y="221.08" as="sourcePoint" />
+            <mxPoint x="710.0000000000001" y="220.00000000000009" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-10" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=1.001;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.003;exitY=0.299;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="100" y="391" as="sourcePoint" />
+            <mxPoint x="709" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Recherche de l&#39;id dans les données" vertex="1">
+          <mxGeometry height="30" width="250" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ID connu" vertex="1">
+          <mxGeometry height="30" width="120" x="130" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ID ou MDP inconnu" vertex="1">
+          <mxGeometry height="30" width="130" x="140" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Identification()" vertex="1">
+          <mxGeometry height="30" width="110" x="550" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-20" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="120" />
+            </Array>
+            <mxPoint x="105" y="120" as="sourcePoint" />
+            <mxPoint x="310" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-21" connectable="0" parent="ZeRAZTS1d9kNsgj7ibqy-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Entre un ID et MDP" vertex="1">
+          <mxGeometry relative="1" x="-0.1326" y="-1" as="geometry">
+            <mxPoint x="15" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-6" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="P9-OtHrmIBAMTXOggs3P-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="315" y="640" as="sourcePoint" />
+            <mxPoint x="270" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-7" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ZeRAZTS1d9kNsgj7ibqy-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="525" y="620" as="sourcePoint" />
+            <mxPoint x="510.47" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Diagramme de séquence&amp;nbsp; du choix de l&#39;utilisateur" vertex="1">
+          <mxGeometry height="95" width="150" x="620" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-17" edge="1" parent="1" source="ZeRAZTS1d9kNsgj7ibqy-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ZeRAZTS1d9kNsgj7ibqy-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-53" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Visiteur" vertex="1">
+          <mxGeometry height="60" width="30" x="90" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-59" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="100" y="620" as="sourcePoint" />
+            <mxPoint x="100" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-64" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="327.5" y="120" />
+            </Array>
+            <mxPoint x="252.5" y="120" as="sourcePoint" />
+            <mxPoint x="520" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-65" connectable="0" parent="ZeRAZTS1d9kNsgj7ibqy-64" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="transmission de l&#39;ID et du MDP" vertex="1">
+          <mxGeometry relative="1" x="-0.1326" y="-1" as="geometry">
+            <mxPoint x="9" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-73" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="retourne True">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="514" y="290" as="sourcePoint" />
+            <mxPoint x="314" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-74" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="retourne False">
+          <mxGeometry relative="1" x="0.0341" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="516" y="500" as="sourcePoint" />
+            <mxPoint x="311" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-90" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="On affiche &quot;ID ou MDP erroné&quot;" vertex="1">
+          <mxGeometry height="30" width="200" x="110" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-91" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="500" as="sourcePoint" />
+            <mxPoint x="100" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-99" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="550" as="sourcePoint" />
+            <mxPoint x="100" y="549.79" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-100" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Affiche la page initiale" vertex="1">
+          <mxGeometry height="30" width="120" x="140" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeRAZTS1d9kNsgj7ibqy-106" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="270" />
+              <mxPoint x="540" y="290" />
+            </Array>
+            <mxPoint x="520" y="270" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="320" />
+              <mxPoint x="540" y="340" />
+            </Array>
+            <mxPoint x="530" y="320" as="sourcePoint" />
+            <mxPoint x="520" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Authentification()" vertex="1">
+          <mxGeometry height="30" width="120" x="550" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="retourne True">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="514" y="340" as="sourcePoint" />
+            <mxPoint x="314" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="MDP connu" vertex="1">
+          <mxGeometry height="30" width="120" x="130" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ID connu et MDP juste" vertex="1">
+          <mxGeometry height="30" width="140" x="140" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="590" />
+              <mxPoint x="560" y="620" />
+            </Array>
+            <mxPoint x="530" y="590" as="sourcePoint" />
+            <mxPoint x="530" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Autorisation()" vertex="1">
+          <mxGeometry height="30" width="120" x="560" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-12" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="retourne le bon utilisateur">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="620" as="sourcePoint" />
+            <mxPoint x="320" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eIUb1lR83aiTcEnxetVv-14" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="Affiche la page correxpondante à l&#39;utilisateur">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="310" y="619" as="sourcePoint" />
+            <mxPoint x="110" y="619" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
