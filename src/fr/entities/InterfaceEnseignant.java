@@ -1,6 +1,7 @@
 public interface InterfaceEnseignant {
-	
-	void create_Cours(String nom, Formation formation);
+
+    void creerCours(String nom, Formation formation);
+    void creerCours(String nom);
 
     void ajouterCours(int idCours);
 
