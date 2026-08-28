@@ -96,8 +96,16 @@ public class Enseignant extends Personnel
     }
     
     @Override
-	public void create_Cours(String nom, Formation formation) {
+	public void creerCours(String nom, Formation formation) {
         Cours cours = new Cours(nom, formation, this);
+
+        coursSuivis.add(cours);
+    }
+    
+    @Override
+    public void creerCours(String nom) {
+
+        Cours cours = new Cours(nom, null, this);
 
         coursSuivis.add(cours);
     }
