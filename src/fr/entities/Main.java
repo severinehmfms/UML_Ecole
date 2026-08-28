@@ -20,6 +20,8 @@ public class Main {
 
 		Utilisateur userConnecte = null;
 
+
+
 		//Menu de base en tant que Visiteur
 		String[] menu = {
 				"Quitter",
@@ -28,6 +30,7 @@ public class Main {
 		};
 
 		int choice_user = -1;
+		//tant que l'utilisateur n'a pas demandé à quitter le programme
 		while (choice_user != 0) {
 			//On demande à l'utilisateur son choix par rapport au menu proposé
 			choice_user = InputUtiles.ask_user_choice(scanner, menu);
@@ -37,20 +40,17 @@ public class Main {
 				switch (choice_user) {
 					case 1:
 						//Demande d'identification
-						userConnecte = connexion();
+						userConnecte = ihm_demande_connexion();
 						if (userConnecte != null) {
 							//Si user connecté ok, On récupère le menu associé à ce type d'utilisateur
-							//System.out.println("Responsabilités : " + userConnecte.getResponsabilites());
 							System.out.println("Vous avez les droits de : " + userConnecte.getClass().getSimpleName());
 							menu = userConnecte.getMenu();
 						}
-						/*if (userConnecte != null && userConnecte.autorisation(Utilisateur.Responsabilite.GERER_COMPTES_UTILISATEURS)) {
-							System.out.println("Accès autorisé");
-						} */
 						break;
 					case 2:
 						//Affichage des formations proposées par l'école
 						System.out.println("Affichage des formations proposées par l'école");
+						//TODO Implémenter le code pour l'affichage des formations
 						break;
 					case 0:
 						System.out.println("Au-revoir et à bientôt !");
@@ -60,7 +60,6 @@ public class Main {
 				if (choice_user == 0){
 					System.out.println("Au-revoir et à bientôt !");
 				}else{
-					//System.out.println("Partie en cours de développement ! ");
 					//On appelle l'action correspondant au menu de l'utilisateur pour ce type d'utilisateur
 					userConnecte.getMenuAction(choice_user);
 				}
@@ -75,7 +74,7 @@ public class Main {
 	 * Méthode qui gère l'interaction avec l'utilisateur pour la connexion
 	 * @return Utilisateur
 	 */
-	public static Utilisateur connexion() {
+	public static Utilisateur ihm_demande_connexion() {
 		Utilisateur user = null;
 		//On va demander à l'utilisateur de saisir son login, puis son mot de passe
 		String loginTest = InputUtiles.input_string(scanner, "Entrez votre identifiant");
@@ -85,18 +84,13 @@ public class Main {
 			user = Utilisateur.authentification(loginTest, mdpTest);
 			if (user != null) {
 				if (user.getNom() != null && user.getNom() != "" ) System.out.println("Bienvenue " + user.getNom() );
-				//System.out.println(user.getClass().getSimpleName());
-				//On affiche les informations sur l'Utilisateur, et surtout ses droits (pour test)
-				//System.out.println(user.getResponsabilites());
 			} else {
-				System.out.println("Erreur d'identifiant ou de mot de passe, merci de recommencer !");
+				System.out.println(Utilisateur.MSG_ERREUR_AUTHENTIFICATION);
 			}
 		} else {
-			System.out.println("Erreur d'identifiant ou de mot de passe, merci de recommencer !");
+			System.out.println(Utilisateur.MSG_ERREUR_AUTHENTIFICATION);
 		}
 		return user;
 	}
-
-
 
 }

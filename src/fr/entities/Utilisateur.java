@@ -20,6 +20,7 @@ public abstract class Utilisateur {
     //Responsabilités (=droits) pour cet Utilisateur
     private Set<Responsabilite> responsabilites = new HashSet<>();
 
+    public static final String MSG_ERREUR_AUTHENTIFICATION = "Erreur d'identifiant ou de mot de passe, merci de recommencer !";
     public static final String MSG_ERREUR_DROITS = "Vous n'avez pas les droits pour accéder à cette fonctionnalité";
 
     //Enum pour les responsabilités existantes
