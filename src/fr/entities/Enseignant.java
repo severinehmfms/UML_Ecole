@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-public class Enseignant extends Utilisateur
+public class Enseignant extends Personnel
         implements InterfaceEnseignant {
 
     private static final List<Enseignant> enseignants = new ArrayList<>();
@@ -62,12 +62,23 @@ public class Enseignant extends Utilisateur
     public void getMenuAction(int choiceMenuUser){
         switch(choiceMenuUser){
             case 1:
-                //TODO Ici appeler la méthode d'affichage des cours à donner de l'enseignant
-                System.out.println("Voir les cours à donner");
+                if (this.autorisation(Responsabilite.VOIR_COURS_A_DONNER)) {
+                    System.out.println("Voir les cours à donner");
+                    //TODO Ici appeler la méthode d'affichage des cours à donner pour cet enseignant
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
             case 2 :
-                //TODO Ici appeler la méthode d'affichage de la liste des élèves'
-                System.out.println("Voir la liste des élèves");
+                if (this.autorisation(Responsabilite.VOIR_LISTE_ELEVES)) {
+                    System.out.println("Voir la liste des élèves");
+                    //TODO Ici appeler la méthode d'affichage de la liste des élèves'
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
+
                 break;
         }
     }

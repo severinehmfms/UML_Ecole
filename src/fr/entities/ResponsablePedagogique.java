@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-public class ResponsablePedagogique extends Utilisateur
+public class ResponsablePedagogique extends Personnel
         implements InterfaceResponsable {
 
     private static final List<ResponsablePedagogique> responsables =
@@ -82,12 +82,22 @@ public class ResponsablePedagogique extends Utilisateur
     public void getMenuAction(int choiceMenuUser){
         switch(choiceMenuUser){
             case 1:
-                //TODO Ici appeler la méthode de gestion des élèves
-                System.out.println("Gestion des élèves");
+                if (this.autorisation(Responsabilite.GERER_ELEVES)) {
+                    System.out.println("Gestion des élèves");
+                    //TODO Ici appeler la méthode de gestion des élèves
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
             case 2 :
-                //TODO Ici appeler la méthode pour ajouter des élèves à un cours
-                System.out.println("Ajouter des élèves à un cours");
+                if (this.autorisation(Responsabilite.AJOUTER_ELEVE_FORMATION)) {
+                    System.out.println("Ajouter des élèves à une formation");
+                    //TODO Ici appeler la méthode pour ajouter des élèves à une formation
+
+                }else{
+                    System.out.println(Utilisateur.MSG_ERREUR_DROITS);
+                }
                 break;
         }
     }

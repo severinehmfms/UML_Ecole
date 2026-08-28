@@ -20,6 +20,8 @@ public abstract class Utilisateur {
     //Responsabilités (=droits) pour cet Utilisateur
     private Set<Responsabilite> responsabilites = new HashSet<>();
 
+    public static final String MSG_ERREUR_DROITS = "Vous n'avez pas les droits pour accéder à cette fonctionnalité";
+
     //Enum pour les responsabilités existantes
     public enum Responsabilite {
         CONSULTER_FORMATIONS,

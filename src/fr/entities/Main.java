@@ -8,7 +8,8 @@ public class Main {
 	public static void main(String[] args) {
 
 	    //On initialise les utilisateurs pour l'exercice
-		new Eleve("eleve1", "1234");
+		Eleve eleve = new Eleve("eleve1", "1234");
+		eleve.setNom("Alice Dupont");
 		new Eleve("eleve2", "5678");
 		new Eleve("eleve3", "1212");
 		new Administrateur("root","root");
@@ -36,12 +37,14 @@ public class Main {
 			if (userConnecte == null) {
 				switch (choice_user) {
 					case 1:
-						//Choix des produits
+						//Demande d'identification
 						userConnecte = connexion();
-
-						//Si user connecté ok, On récupère le menu associé à ce type d'utilisateur
-						System.out.println("Vous avez les droits de : " + userConnecte.getClass().getSimpleName());
-						menu = userConnecte.getMenu();
+						if (userConnecte != null) {
+							//Si user connecté ok, On récupère le menu associé à ce type d'utilisateur
+							//System.out.println("Responsabilités : " + userConnecte.getResponsabilites());
+							System.out.println("Vous avez les droits de : " + userConnecte.getClass().getSimpleName());
+							menu = userConnecte.getMenu();
+						}
 						/*if (userConnecte != null && userConnecte.autorisation(Utilisateur.Responsabilite.GERER_COMPTES_UTILISATEURS)) {
 							System.out.println("Accès autorisé");
 						} */
@@ -59,9 +62,7 @@ public class Main {
 					System.out.println("Au-revoir et à bientôt !");
 				}else{
 					//System.out.println("Partie en cours de développement ! ");
-					//System.out.println("Menu pour " + userConnecte.getResponsabilites());
-
-					//On appelle l'action correspondant au menu de l'utilisateur
+					//On appelle l'action correspondant au menu de l'utilisateur pour ce type d'utilisateur
 					userConnecte.getMenuAction(choice_user);
 				}
 			}
@@ -84,7 +85,7 @@ public class Main {
 		if (Utilisateur.identification(loginTest)) {
 			user = Utilisateur.authentification(loginTest, mdpTest);
 			if (user != null) {
-				System.out.println("Bienvenue " + user.getNom() );
+				if (user.getNom() != null && user.getNom() != "" ) System.out.println("Bienvenue " + user.getNom() );
 				//System.out.println(user.getClass().getSimpleName());
 				//On affiche les informations sur l'Utilisateur, et surtout ses droits (pour test)
 				//System.out.println(user.getResponsabilites());
