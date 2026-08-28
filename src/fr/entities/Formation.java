@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Formation {
 
+    //Liste des formations instanciées
     private static final List<Formation> formations = new ArrayList<>();
 
     private static int prochainId = 1;

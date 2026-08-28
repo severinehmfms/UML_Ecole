@@ -21,14 +21,18 @@ public class Main {
 
 		//On initialise les formations pour l'exercice
 		Formation formation1 = new Formation("Formation CDA");
-		new Formation("BUT Réseaux et télécommunication");
-		new Formation("Diplôme d’ingénieur informatique");
+		Formation formation2 = new Formation("BUT Réseaux et télécommunication");
+		Formation formation3 = new Formation("Diplôme d’ingénieur informatique");
 
 		//On initialise les cours pour l'exercice
 		Cours cours1 = new Cours("UML", formation1, enseignant);
 		Cours cours2 = new Cours("JAVA", formation1, enseignant2);
 
+		Cours cours3 = new Cours("Python", formation2, enseignant2);
+		Cours cours4 = new Cours("Réseau", formation2, enseignant2);
 
+		eleve.inscrireEleveAFormation(formation1);
+		eleve.inscrireEleveAFormation(formation2);
 
 		Utilisateur userConnecte = null;
 
