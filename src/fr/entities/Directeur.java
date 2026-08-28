@@ -10,6 +10,10 @@ public class Directeur extends Utilisateur
     private int idDirecteur;
     private final List<ResponsablePedagogique> responsablesPedagogiques = new ArrayList<>();
 
+    //Constante qui permet de récupérer le menu
+    public final String[] MENU_DIRECTEUR = { "Gestion des cours", "Gestion des enseignants", "Gestion des responsables pédagogiques"};
+
+
     public Directeur(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
     }
@@ -41,6 +45,36 @@ public class Directeur extends Utilisateur
             }
         }
         return null;
+    }
+
+    //Fonction qui retourne le menu correspondant au rôle Administrateur
+    public String[] getMenu(){
+        String[] menu = new String[MENU_DIRECTEUR.length +1];
+        int index = 0;
+
+        menu[index++] = "Quitter";
+
+        for (int i = 0; i < MENU_DIRECTEUR.length; i++) {
+            menu[i+1] = MENU_DIRECTEUR[i];
+        }
+        return menu;
+    }
+
+    public void getMenuAction(int choiceMenuUser){
+        switch(choiceMenuUser){
+            case 1:
+                //TODO Ici appeler la méthode de gestion des cours
+                System.out.println("Gestion des cours");
+                break;
+            case 2 :
+                //TODO Ici appeler la méthode de gestion des enseignants
+                System.out.println("Gestion des enseignants");
+                break;
+            case 3 :
+                //TODO Ici appeler la méthode de gestion des responsables pédagogiques
+                System.out.println("Gestion des responsables pédagogiques");
+                break;
+        }
     }
 
     public int getIdDirecteur() {

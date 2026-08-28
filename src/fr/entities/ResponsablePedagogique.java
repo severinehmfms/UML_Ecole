@@ -12,6 +12,10 @@ public class ResponsablePedagogique extends Utilisateur
     private final List<Enseignant> enseignants = new ArrayList<>();
     private final List<Formation> formations = new ArrayList<>();
 
+    //Constante qui permet de récupérer le menu
+    public final String[] MENU_RESPONSABLE = { "Gestion des élèves", "Ajouter un élève à un cours"};
+
+
     public ResponsablePedagogique(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
     }
@@ -61,6 +65,33 @@ public class ResponsablePedagogique extends Utilisateur
     public List<Formation> getFormations() {
         return formations;
     }
+
+    //Fonction qui retourne le menu correspondant au rôle Administrateur
+    public String[] getMenu(){
+        String[] menu = new String[MENU_RESPONSABLE.length +1];
+        int index = 0;
+
+        menu[index++] = "Quitter";
+
+        for (int i = 0; i < MENU_RESPONSABLE.length; i++) {
+            menu[i+1] = MENU_RESPONSABLE[i];
+        }
+        return menu;
+    }
+
+    public void getMenuAction(int choiceMenuUser){
+        switch(choiceMenuUser){
+            case 1:
+                //TODO Ici appeler la méthode de gestion des élèves
+                System.out.println("Gestion des élèves");
+                break;
+            case 2 :
+                //TODO Ici appeler la méthode pour ajouter des élèves à un cours
+                System.out.println("Ajouter des élèves à un cours");
+                break;
+        }
+    }
+
 
     @Override
     public void ajouterFormation(int idFormation) {

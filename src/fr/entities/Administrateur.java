@@ -9,6 +9,9 @@ public class Administrateur extends Utilisateur {
 
     private int idAdministrateur;
 
+    //Constante qui permet de récupérer le menu
+    public final String[] MENU_ADMINISTRATEUR = { "Gestion des droits des utilisateurs", "Gestion des comptes utilisateurs"};
+
     public Administrateur(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
         administrateurs.add(this);
@@ -40,6 +43,32 @@ public class Administrateur extends Utilisateur {
             }
         }
         return null;
+    }
+
+    //Fonction qui retourne le menu correspondant au rôle Administrateur
+    public String[] getMenu(){
+        String[] menu = new String[MENU_ADMINISTRATEUR.length +1];
+        int index = 0;
+
+        menu[index++] = "Quitter";
+
+        for (int i = 0; i < MENU_ADMINISTRATEUR.length; i++) {
+            menu[i+1] = MENU_ADMINISTRATEUR[i];
+        }
+        return menu;
+    }
+
+    public void getMenuAction(int choiceMenuUser){
+       switch(choiceMenuUser){
+           case 1:
+               //TODO Ici appeler la méthode de gestion des droits des utilisateurs
+               System.out.println("Gestion des droits des utilisateurs");
+               break;
+           case 2 :
+               //TODO Ici appeler la méthode de gestion des utilisateurs
+               System.out.println("Gestion des comptes utilisateurs");
+               break;
+       }
     }
 
     public int getIdAdministrateur() {

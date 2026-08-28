@@ -18,7 +18,6 @@ public class Main {
 		new ResponsablePedagogique("responsable2", "qwerty");
 		new Directeur("directeur", "admin");
 
-
 		Utilisateur userConnecte = null;
 
 		//Menu de base en tant que Visiteur
@@ -33,7 +32,7 @@ public class Main {
 			//On demande à l'utilisateur son choix par rapport au menu proposé
 			choice_user = Functions.ask_user_choice(scanner, menu);
 
-			//Si l'utilisateur est à null, on travaille sur le menu de base de non connexion
+			//Si l'utilisateur est à null (=visiteur), on travaille sur le menu de base de non connexion
 			if (userConnecte == null) {
 				switch (choice_user) {
 					case 1:
@@ -56,15 +55,17 @@ public class Main {
 						break;
 				}
 			}else{
-				//TODO On traite les actions du menu du type d'utilisateur
-				System.out.println("Partie en cours de développement ! ");
-				System.out.println(userConnecte.getResponsabilites());
-				//On force la sortie
-				choice_user = 0;
+				if (choice_user == 0){
+					System.out.println("Au-revoir et à bientôt !");
+				}else{
+					//System.out.println("Partie en cours de développement ! ");
+					//System.out.println("Menu pour " + userConnecte.getResponsabilites());
+
+					//On appelle l'action correspondant au menu de l'utilisateur
+					userConnecte.getMenuAction(choice_user);
+				}
 			}
-
 		}
-
 
 		//On referme le scanner
 		scanner.close();
@@ -72,7 +73,7 @@ public class Main {
 
 	/**
 	 * Méthode qui gère l'interaction avec l'utilisateur pour la connexion
-	 * @return
+	 * @return Utilisateur
 	 */
 	public static Utilisateur connexion() {
 		Utilisateur user = null;

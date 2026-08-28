@@ -13,6 +13,9 @@ public class Eleve extends Utilisateur {
     private static final List<Eleve> eleves =
             new ArrayList<>();
 
+    //Constante qui permet de récupérer le menu
+    public final String[] MENU_ELEVE = { "Voir mes cours"};
+
     public Eleve(String id,
                  String nom,
                  String prenom,
@@ -40,6 +43,27 @@ public class Eleve extends Utilisateur {
             }
         }
         return null;
+    }
+
+    //Fonction qui retourne le menu correspondant au rôle Administrateur
+    public String[] getMenu(){
+        String[] menu = new String[MENU_ELEVE.length +1];
+        int index = 0;
+        menu[index++] = "Quitter";
+
+        for (int i = 0; i < MENU_ELEVE.length; i++) {
+            menu[i+1] = MENU_ELEVE[i];
+        }
+        return menu;
+    }
+
+    public void getMenuAction(int choiceMenuUser){
+        switch(choiceMenuUser){
+            case 1:
+                //TODO Ici appeler la méthode d'affichage des cours de l'élève
+                System.out.println("Mes cours");
+                break;
+        }
     }
 
     public int getNumeroEleve() {

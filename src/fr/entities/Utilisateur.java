@@ -145,6 +145,14 @@ public abstract class Utilisateur {
         return responsabilites.contains(responsabilite);
     }
 
+    //Classe abstraite getMenu pour que chaque classe fille puisse implémenter son propre menu
+    public abstract String[] getMenu();
+
+    //Classe abstraite getMenuAction
+    public abstract void getMenuAction(int choiceMenuUser);
+
+    /*
+    //Finalement ça ne me plait pas, pour gérer les actions derrière... et pas très POO !
     public String[] getMenu(){
         String[] menu = new String[this.responsabilites.size()+1];
         int index = 0;
@@ -195,7 +203,7 @@ public abstract class Utilisateur {
             menu[index++] = "Gérer les comptes utilisateurs";
         }
         return Arrays.copyOf(menu, index);
-    }
+    }*/
 
 
 

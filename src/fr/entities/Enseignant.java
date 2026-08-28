@@ -14,6 +14,9 @@ public class Enseignant extends Utilisateur
         super(identifiant, motDePasse);
     }
 
+    //Constante qui permet de récupérer le menu
+    public final String[] MENU_ENSEIGNANT = { "Voir les cours à donner", "Voir la liste des élèves"};
+
     public Enseignant(String identifiant,
                       String nom,
                       String prenom,
@@ -41,6 +44,32 @@ public class Enseignant extends Utilisateur
             }
         }
         return null;
+    }
+
+    //Fonction qui retourne le menu correspondant au rôle Administrateur
+    public String[] getMenu(){
+        String[] menu = new String[MENU_ENSEIGNANT.length +1];
+        int index = 0;
+
+        menu[index++] = "Quitter";
+
+        for (int i = 0; i < MENU_ENSEIGNANT.length; i++) {
+            menu[i+1] = MENU_ENSEIGNANT[i];
+        }
+        return menu;
+    }
+
+    public void getMenuAction(int choiceMenuUser){
+        switch(choiceMenuUser){
+            case 1:
+                //TODO Ici appeler la méthode d'affichage des cours à donner de l'enseignant
+                System.out.println("Voir les cours à donner");
+                break;
+            case 2 :
+                //TODO Ici appeler la méthode d'affichage de la liste des élèves'
+                System.out.println("Voir la liste des élèves");
+                break;
+        }
     }
 
     public int getIdEnseignant() {

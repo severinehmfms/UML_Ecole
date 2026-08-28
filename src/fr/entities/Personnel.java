@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Personnel extends Utilisateur {
+public abstract class Personnel extends Utilisateur {
 
     public Personnel(String identifiant, String motDePasse) {
         super(identifiant, motDePasse);
@@ -11,4 +11,5 @@ public class Personnel extends Utilisateur {
                      Adresse adresse) {
         super(identifiant, nom, prenom, motDePasse, dateNaissance, adresse);
     }
+
 }
