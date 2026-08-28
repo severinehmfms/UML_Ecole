@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -18,9 +19,12 @@ public class Main {
 		new ResponsablePedagogique("responsable2", "qwerty");
 		new Directeur("directeur", "admin");
 
+		//On initialise les formations pour l'exercice
+		new Formation(1, "Formation CDA");
+		new Formation(2, "BUT Réseaux et télécommunication");
+		new Formation(3, "Diplôme d’ingénieur informatique");
+
 		Utilisateur userConnecte = null;
-
-
 
 		//Menu de base en tant que Visiteur
 		String[] menu = {
@@ -50,7 +54,11 @@ public class Main {
 					case 2:
 						//Affichage des formations proposées par l'école
 						System.out.println("Affichage des formations proposées par l'école");
-						//TODO Implémenter le code pour l'affichage des formations
+						//Affichage des formations proposées par l'école
+						List<Formation> formations = Formation.getFormations();
+						for (Formation f : formations) {
+							System.out.println(" - " + f.getNom());
+						}
 						break;
 					case 0:
 						System.out.println("Au-revoir et à bientôt !");
